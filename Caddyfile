@@ -1,0 +1,9 @@
+http://localhost:4000,
+http://10.207.199.138:4000,
+http://36.135.4.212:4100 {
+  templates
+  encode zstd gzip
+  file_server {
+    disable_canonical_uris
+  }
+}
