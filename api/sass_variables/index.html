@@ -456,7 +456,7 @@
 
 
 <span class="nv">$component-highlight-border-radius</span><span class="p">:</span>            <span class="n">null</span> <span class="o">!</span><span class="nb">default</span>
-<span class="nv">$component-highlight-hint-margin</span><span class="p">:</span>              <span class="nf">baseline</span><span class="p">(</span><span class="m">0</span><span class="mi">.5</span><span class="p">)</span> <span class="m">0</span> <span class="m">0</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$component-highlight-hint-margin-y</span><span class="p">:</span>            <span class="nf">baseline</span><span class="p">(</span><span class="m">0</span><span class="mi">.5</span><span class="p">)</span> <span class="o">!</span><span class="nb">default</span>
 <span class="nv">$component-highlight-on-padding</span><span class="p">:</span>               <span class="nf">baseline</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="o">!</span><span class="nb">default</span>
 <span class="nv">$component-highlight-on-box-shadow</span><span class="p">:</span>            <span class="n">null</span> <span class="o">!</span><span class="nb">default</span>
 <span class="nv">$component-highlight-off-padding</span><span class="p">:</span>              <span class="m">0</span> <span class="o">!</span><span class="nb">default</span>
@@ -535,6 +535,28 @@
 <span class="nv">$fieldset-description-font-size</span><span class="p">:</span>      <span class="m">16px</span> <span class="o">!</span><span class="nb">default</span>
 <span class="nv">$fieldset-description-line-height</span><span class="p">:</span>    <span class="m">1</span><span class="mi">.5</span> <span class="o">!</span><span class="nb">default</span>
 <span class="nv">$fieldset-description-color</span><span class="p">:</span>          <span class="nv">$color-secondary</span> <span class="o">!</span><span class="nb">default</span>
+
+
+
+<span class="nv">$subform-container-padding</span><span class="p">:</span>               <span class="nf">baseline</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-container-background</span><span class="p">:</span>            <span class="nv">$background-color-muted</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-container-border-width</span><span class="p">:</span>          <span class="nv">$line-width-main</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-container-border-color</span><span class="p">:</span>          <span class="nv">$line-color-muted</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-container-border-radius</span><span class="p">:</span>         <span class="nv">$border-radius-main</span> <span class="o">!</span><span class="nb">default</span>
+
+<span class="nv">$subform-fieldset-descendants-element-margin</span><span class="p">:</span>    <span class="m">0</span> <span class="nb">auto</span> <span class="nf">baseline</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="nb">auto</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-fieldset-actions-element-margin</span><span class="p">:</span>        <span class="nf">baseline</span><span class="p">(</span><span class="m">0</span><span class="mi">.5</span><span class="p">)</span> <span class="nf">baseline</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="nf">baseline</span><span class="p">(</span><span class="m">1</span><span class="mi">.5</span><span class="p">)</span> <span class="m">0</span> <span class="o">!</span><span class="nb">default</span>
+
+<span class="nv">$subform-previewer-container-border-radius</span><span class="p">:</span>    <span class="nv">$border-radius-rounded-large</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-previewer-container-padding</span><span class="p">:</span>          <span class="nv">$member-previewer-container-padding</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-previewer-container-background</span><span class="p">:</span>       <span class="nv">$member-previewer-container-background</span> <span class="o">!</span><span class="nb">default</span>
+
+<span class="nv">$subform-fieldset-member-actions-background</span><span class="p">:</span>                         <span class="nv">$background-color-muted</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-fieldset-member-actions-border-width</span><span class="p">:</span>                       <span class="nv">$line-width-main</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-fieldset-member-actions-border-color</span><span class="p">:</span>                       <span class="nv">$line-color-muted</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-fieldset-member-previewer-border-width</span><span class="p">:</span>                     <span class="nv">$subform-fieldset-member-actions-border-width</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-fieldset-member-previewer-border-color</span><span class="p">:</span>                     <span class="nv">$subform-fieldset-member-actions-border-color</span> <span class="o">!</span><span class="nb">default</span>
+<span class="nv">$subform-fieldset-member-previewer-highlight-error-on-background</span><span class="p">:</span>    <span class="nf">lighten</span><span class="p">(</span><span class="nv">$component-highlight-error-on-background</span><span class="o">,</span> <span class="m">6%</span><span class="p">)</span> <span class="o">!</span><span class="nb">default</span>
 
 
 
