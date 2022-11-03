@@ -256,15 +256,20 @@
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This is still a type specific hook function.</span><span class="dl">'</span><span class="p">)</span>
   <span class="p">}</span>
 <span class="p">}],</span> <span class="p">{</span><span class="na">only</span><span class="p">:</span> <span class="dl">'</span><span class="s1">MyTextInput</span><span class="dl">'</span><span class="p">})</span>
-</code></pre></div> <h3 id=schemafor>#schema.for()</h3> <p>获取成员所有属性或某个属性的定义。</p> <div class=highlight><pre class="code javascript"><code><span class="c1">// reactive#schema.for(params)</span>
+</code></pre></div> <h3 id=schemafor>#schema.for()</h3> <p>获取成员所有属性或某个属性的定义。</p> <div class=highlight><pre class="code javascript"><code><span class="c1">// reactive#schema.for(params, options)</span>
 <span class="c1">// @param {Object} params</span>
 <span class="c1">// @prop {string} params.id - 成员唯一标识</span>
 <span class="c1">// @prop {string} [params.prop] - 属性名称，如设定之返回该属性定义，否则返回所有属性定义。</span>
+<span class="c1">// @prop {Object} [options = {}]</span>
+<span class="c1">// @prop {string | Array} [options.only] - 当 params.prop 未定义时可使用属性名称正向过滤</span>
+<span class="c1">// @prop {string | Array} [options.except] - 当 params.prop 未定义时可使用属性名称反向过滤</span>
 <span class="c1">// @returns {ReactiveMemberPropSchema | ReactiveMemberPropSchema[]}</span>
 
 <span class="c1">// @examples</span>
 <span class="nx">reactive</span><span class="p">.</span><span class="nx">schema</span><span class="p">.</span><span class="k">for</span><span class="p">({</span><span class="na">id</span><span class="p">:</span> <span class="nx">myMember</span><span class="p">,</span> <span class="na">prop</span><span class="p">:</span> <span class="dl">'</span><span class="s1">value</span><span class="dl">'</span><span class="p">})</span>
 <span class="nx">reactive</span><span class="p">.</span><span class="nx">schema</span><span class="p">.</span><span class="k">for</span><span class="p">({</span><span class="na">id</span><span class="p">:</span> <span class="nx">myMember</span><span class="p">})</span>
+<span class="nx">reactive</span><span class="p">.</span><span class="nx">schema</span><span class="p">.</span><span class="k">for</span><span class="p">({</span><span class="na">id</span><span class="p">:</span> <span class="nx">myMember</span><span class="p">},</span> <span class="p">{</span><span class="na">except</span><span class="p">:</span> <span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">})</span>
+<span class="nx">reactive</span><span class="p">.</span><span class="nx">schema</span><span class="p">.</span><span class="k">for</span><span class="p">({</span><span class="na">id</span><span class="p">:</span> <span class="nx">myMember</span><span class="p">},</span> <span class="p">{</span><span class="na">only</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">value</span><span class="dl">'</span><span class="p">]})</span>
 </code></pre></div> <h3 id=schemareferenceparse>#schema.reference.parse()</h3> <p>将以 <code>.</code> 分割的由成员 name 和属性名构成的引用路径字符串，转换为由成员 id 和属性名称构成的 DependencyProvider 对象。</p> <div class=highlight><pre class="code javascript"><code><span class="c1">// reactive#schema.reference.parse(path, options)</span>
 <span class="c1">// @param {string} path</span>
 <span class="c1">// @param {Object} [options]</span>
